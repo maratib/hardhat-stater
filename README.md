@@ -1,5 +1,5 @@
 # Hardhat starter
-
+Hardhat, Typescript, mocha test env., 
 ### Installation
 ```bash
 yarn init -y
