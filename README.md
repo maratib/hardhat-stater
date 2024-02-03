@@ -1,14 +1,24 @@
 # Hardhat starter
-Hardhat, Typescript, mocha test env., 
+Hardhat, Typescript, mocha test env., Smart Contracts development, testing and deployment.
 
-Hardhat 
+`Hardhat development using yarn`
+
 ### Installation
 ```bash
+# Install hardhat shorthand (Instead of writting full npx hardhat, you can just use `hh`)
+npm install --global hardhat-shorthand
+# Some of hardhat's common commands
+hh help
+hh compile 
+hh clean
+hh watch
+
+
 # Initiate Project
 yarn init -y
 
 # Install devDependencies
-yarn add -D hardhat @nomicfoundation/hardhat-toolbox hardhat-watcher ts-node typescript ethers chai@4 @types/node @types/mocha @types/chai@4 "@nomicfoundation/hardhat-chai-matchers@^2.0.0" "@nomicfoundation/hardhat-ethers@^3.0.0" "@nomicfoundation/hardhat-network-helpers@^1.0.0" "@nomicfoundation/hardhat-verify@^2.0.0" "@typechain/ethers-v6@^0.5.0" "@typechain/hardhat@^9.0.0" "hardhat-gas-reporter@^1.0.8" "solidity-coverage@^0.8.1" "typechain@^8.3.0"
+yarn add -D hardhat @nomicfoundation/hardhat-toolbox hardhat-watcher ts-node typescript ethers chai@4 @types/node @types/mocha @types/chai@4 @nomicfoundation/hardhat-chai-matchers@^2.0.0 @nomicfoundation/hardhat-ethers@^3.0.0 @nomicfoundation/hardhat-network-helpers@^1.0.0 @nomicfoundation/hardhat-verify@^2.0.0 @typechain/ethers-v6@^0.5.0 @typechain/hardhat@^9.0.0 hardhat-gas-reporter@^1.0.8 solidity-coverage@^0.8.1 typechain@^8.3.0
 
 # Create required folders
 mkdir contracts scripts test
@@ -41,7 +51,6 @@ const config: HardhatUserConfig = {
       ],
     },
   }
-
 
 };
 
