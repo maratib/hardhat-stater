@@ -16,11 +16,10 @@ const config: HardhatUserConfig = {
     ci: {
       tasks: [
         'clean',
-        { command: 'compile', params: { quiet: true } },
-        // { command: 'test', params: { noCompile: true, testFiles: ['testfile.ts'] } },
+        { command: 'compile', params: { quiet: true } }
       ],
     },
-  }
+  },
 
 
 };
