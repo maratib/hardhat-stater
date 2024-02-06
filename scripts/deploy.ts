@@ -2,7 +2,8 @@ import { ethers } from "hardhat";
 
 async function main() {
 
-  const contract = await ethers.deployContract("NumberStorage", [], {});
+  const initialBalance = 20;
+  const contract = await ethers.deployContract("NumberStorage", [initialBalance]);
 
   await contract.waitForDeployment();
 

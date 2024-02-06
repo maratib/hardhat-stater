@@ -17,7 +17,7 @@ describe("NumberStorage", function () {
 
     const NumberStorage = await ethers.getContractFactory("NumberStorage");
 
-    const numberStorage = await NumberStorage.deploy();
+    const numberStorage = await NumberStorage.deploy(20);
 
     return { numberStorage, owner, otherAccount };
   }
@@ -26,10 +26,10 @@ describe("NumberStorage", function () {
     it("Should set the value of storedNumber value to the value passed in", async function () {
       const { numberStorage, owner } = await loadFixture(initFixture);
 
-      await numberStorage.setNumber(21);
+      await numberStorage.setNumber(10);
       const response = await numberStorage.getNumber();
       console.log(response);
-      expect(response).to.equal(21)
+      expect(response).to.equal(30)
 
     });
   });

@@ -6,10 +6,15 @@ import "hardhat/console.sol";
 contract NumberStorage {
     uint storedNumber;
 
+    constructor(uint _initialBalance) {
+        console.log("Initial Balance: ", _initialBalance);
+        storedNumber = _initialBalance;
+    }
+
     // Storing function
     function setNumber(uint _number) public {
         console.log("Setting number : ", _number);
-        storedNumber = _number;
+        storedNumber += _number;
     }
 
     //Reading function
